@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+    backend:
+        image: lodene/api_backend:1.0 #nom de l'iamge avec la version 
+        networks: 
+          - app-network #nom du network
+        depends_on: 
+          - database #refere a la section 'database' de ce fichier
+
+    database:
+        image: lodene/bdd:1.0
+        networks:
+          - app-network #nom du network
+        environment:
+            - DATABASE_PASSWORD=pwd #on met un mdp
+            - POSTGRES_HOST_AUTH_METHOD=trust #on trust l'auth methode
+
+    httpd:
+        image: lodene/my-apache2:1.0
+        ports:
+          - "80:80" #port du server http du local et du contenaire
+        networks:
+          - app-network #nom du network
+        depends_on:
+          - backend #refere a la section 'bakend' de ce fichier
+
+networks:
+    app-network: #nom du network
