@@ -23,4 +23,5 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn package --file API/simple-api-student/pom.xml
+        working-directory: API/simple-api-student
+        run: mvn package 
