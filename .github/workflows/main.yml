@@ -21,7 +21,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-     #finally build your app with the latest command
+     #finally build your app with the latest comman
       - name: Build and test with Maven
         working-directory: API/simple-api-student
         run: mvn package 
