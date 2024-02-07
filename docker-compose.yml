@@ -7,20 +7,20 @@ services:
           - app-network #nom du network
         depends_on: 
           - database #refere a la section 'database' de ce fichier
-        environment:
-            - DATABASE_PASSWORD=pwd #on met un mdp
-            - DB=mydatabase #on met un mdp
-            - USER=myuser #on met un mdp
-            - URL=database:5432 #on met un mdp
+        environment: #variable d'environnement
+            - DATABASE_PASSWORD=pwd 
+            - DB=mydatabase 
+            - USER=myuser 
+            - URL=database:5432 
 
     database:
         image: lodene/bdd:1.0
         networks:
           - app-network #nom du network
-        environment:
-            - POSTGRES_DB=mydatabase #on met un databse
-            - POSTGRES_PASSWORD=pwd #on met un mdp
-            - POSTGRES_USER=myuser #on met un user
+        environment: #variable d'environnement qu'on peut utiliser dans les fichiers de serv/ pour ne pas qu'il apparaisse en clair dans les fichiers
+            - POSTGRES_DB=mydatabase 
+            - POSTGRES_PASSWORD=pwd
+            - POSTGRES_USER=myuser
 
     httpd:
         image: lodene/my-apache2:1.0
