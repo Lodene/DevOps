@@ -6,22 +6,22 @@ on:
   pull_request:
     branches: [ "master" ]
 
-jobs: #le 'job qu'il fait faire, cad checkouyt, compiler avec java 17 et faire "mvn package" sur le pom.xml
-  test-backend: 
+jobs:
+  test-backend:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2.5.0
+      - name: Checkout repository
+        uses: actions/checkout@v2.5.0
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          java-version: "17"
+          distribution: "temurin"
+          cache: maven
 
-      - name: Build and test with Maven
-        working-directory: simple-api-student
-        run: mvn package 
-
+      - name: Run the Maven verify phase
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=rspid_cpe-devops -Dsonar.organization=rspid -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api-student-main/pom.xml
   # define job to build and publish docker image
   build-and-push-docker-image:
     needs: test-backend

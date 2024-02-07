@@ -12,3 +12,10 @@ Je vais placer mes identifiants docker hub dans les variables d'environnement de
 
 
 Je complete ensuite le fichier .github/workflows/main.yml en completment le fichier. 
+
+plus qu'a push et tester si mes tests fonctionne :
+![alt text](img_github/image-8.png)
+![alt text](img_github/image-9.png)
+
+
+#Setup Quality Gate
