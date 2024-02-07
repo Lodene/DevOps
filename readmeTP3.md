@@ -137,8 +137,9 @@ antoine.adjamidis.takima.cloud : ok=7    changed=7    unreachable=0    failed=0 
 On peut voir qu'il a installer docker et python.
 
 Je crée mon premier role :
-```shell
-lodene@LAPTOP-VV45I4Q7:~/DevOps/ansible/inventories$ ansible-galaxy init roles/docker
+![alt text](image-2.png)
 
-- Role roles/docker was created successfully
-```
+Il faut maintenant créer un nouveau playbook pour le role :
+![alt text](image-4.png)
+et supprimer les dossiers inutile dans roles/docker afin qu'il ne reste plus que :
+![alt text](image-5.png)
