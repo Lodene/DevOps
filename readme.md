@@ -85,13 +85,6 @@ Pointez sur le document/rapport.
 Pourquoi mettons-nous nos images dans un dépôt en ligne ?
     Pour pouvoir le récupérer de n'importe ou si on a les codes d'authentification
 
-2-1 Que sont les conteneurs de test ?
-    bibliotheque java qui execute des conteneurs DOCKER pendant les tests
-
-
-2-2 Documentez vos configurations d'actions Github.
-    fait
-
 
 
 NOTE DE COURS

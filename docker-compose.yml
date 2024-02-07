@@ -1,6 +1,14 @@
 version: '3.7'
 
 services:
+    database:
+        image: lodene/database:1.0
+        networks:
+          - app-network #nom du network
+        environment: #variable d'environnement qu'on peut utiliser dans les fichiers de serv/ pour ne pas qu'il apparaisse en clair dans les fichiers
+            - POSTGRES_DB=mydatabase 
+            - POSTGRES_PASSWORD=pwd
+            - POSTGRES_USER=myuser
     backend:
         image: lodene/api_backend:1.0 #nom de l'iamge avec la version 
         networks: 
@@ -12,15 +20,6 @@ services:
             - DB=mydatabase 
             - USER=myuser 
             - URL=database:5432 
-
-    database:
-        image: lodene/bdd:1.0
-        networks:
-          - app-network #nom du network
-        environment: #variable d'environnement qu'on peut utiliser dans les fichiers de serv/ pour ne pas qu'il apparaisse en clair dans les fichiers
-            - POSTGRES_DB=mydatabase 
-            - POSTGRES_PASSWORD=pwd
-            - POSTGRES_USER=myuser
 
     httpd:
         image: lodene/my-apache2:1.0
