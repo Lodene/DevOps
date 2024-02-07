@@ -40,7 +40,7 @@ jobs:
       - name: Build image and push backend
         uses: docker/build-push-action@v3
         with:
-          # relative path to the place where source code with Dockerfile is located
+          # relative path to the place where source code with Dockerfile is locate
           context: ./simple-api-student
           # Note: tags has to be all lower-cas
           tags:  ${{secrets.AUTH_DOCKER_HUB_USERNAME}}/backend:latest
