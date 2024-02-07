@@ -1,2 +1,10 @@
----
-# tasks file for roles/database
+- name: Launch Database
+  docker_container:
+    name: database
+    image: tp-devops-database:latest
+    env:
+      POSTGRES_DB: "{{ database_name }}"
+      POSTGRES_PASSWORD: "{{ database_password }}"
+      POSTGRES_USER: "{{ database_user }}"
+    networks:
+      - name: "{{ docker_network_name }}"

@@ -28,3 +28,5 @@ sur ces lignes j'ai du récupérer les infos donné par sonnar pour compléter l
 et c'est bon !
 ![alt text](img_github/image-10.png)
 ![alt text](img_github/image-11.png)
+et les images qui se mettent à jour :
+![alt text](img_github/image-12.png)

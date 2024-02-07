@@ -1,2 +1,10 @@
 ---
 # tasks file for roles/proxy
+- name: Run HTTPD
+  docker_container:
+    name: httpd
+    image: lodene/tp-devops-httpd:latest
+    env:
+      POSTGRES_PORT: "{{ database_port }}"
+    networks:
+      - name: "{{ docker_network_name }}"
