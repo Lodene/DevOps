@@ -105,7 +105,3 @@ NOTE DE COURS
     impérative -> on dit ce qu'il doit faire (language c par exemple)
 
     superuser -> become: yes
-
-
-
-    
