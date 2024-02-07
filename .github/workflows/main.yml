@@ -30,6 +30,10 @@ jobs:
 
     # steps to perform in job
     steps:
+
+      - name: Login to DockerHub
+        run: docker login -u ${{ secrets.AUTH_DOCKER_HUB_USERNAME }} -p ${{ secrets.AUTH_DOCKER_HUB_TOKEN }}
+
       - name: Checkout code
         uses: actions/checkout@v2.5.0
 
@@ -55,8 +59,5 @@ jobs:
           context: ./serv
           tags: ${{secrets.AUTH_DOCKER_HUB_USERNAME}}/httpd:latest
           push: ${{ github.ref == 'refs/heads/main' }}
-
-      - name: Login to DockerHub
-        run: docker login -u ${{ secrets.AUTH_DOCKER_HUB_USERNAME }} -p ${{ secrets.AUTH_DOCKER_HUB_TOKEN }}
 
   
