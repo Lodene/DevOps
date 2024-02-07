@@ -1,5 +1,9 @@
-y- name: Role
+- name: Role
   hosts: all
   become: true
   roles:
     - docker
+    - network
+    - database
+    - app
+    - proxy
