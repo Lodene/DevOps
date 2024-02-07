@@ -7,14 +7,20 @@ services:
           - app-network #nom du network
         depends_on: 
           - database #refere a la section 'database' de ce fichier
+        environment:
+            - DATABASE_PASSWORD=pwd #on met un mdp
+            - DB=mydatabase #on met un mdp
+            - USER=myuser #on met un mdp
+            - URL=database:5432 #on met un mdp
 
     database:
         image: lodene/bdd:1.0
         networks:
           - app-network #nom du network
         environment:
-            - DATABASE_PASSWORD=pwd #on met un mdp
-            - POSTGRES_HOST_AUTH_METHOD=trust #on trust l'auth methode
+            - POSTGRES_DB=mydatabase #on met un databse
+            - POSTGRES_PASSWORD=pwd #on met un mdp
+            - POSTGRES_USER=myuser #on met un user
 
     httpd:
         image: lodene/my-apache2:1.0
