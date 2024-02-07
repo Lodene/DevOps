@@ -1,4 +1,4 @@
-- name: Role
+- name: roles
   hosts: all
   become: true
   roles:
