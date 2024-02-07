@@ -19,3 +19,11 @@ plus qu'a push et tester si mes tests fonctionne :
 
 
 #Setup Quality Gate
+Il faut juste créer son compte sonar, suivre les instruction et modifier le main.yml pour ajouter :
+```shell
+ - name: Run the Maven verify phase
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=Lodene_DevOps -Dsonar.organization=lodene -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./simple-api-student/pom.xml
+```
+sur ces lignes j'ai du récupérer les infos donné par sonnar pour compléter la commande donné par le tp
+et c'est bon !
+![alt text](img_github/image-9.png)
