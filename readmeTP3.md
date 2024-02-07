@@ -143,3 +143,9 @@ Il faut maintenant créer un nouveau playbook pour le role :
 ![alt text](img_github/image-4.png)
 et supprimer les dossiers inutile dans roles/docker afin qu'il ne reste plus que :
 ![alt text](img_github/image-5.png)
+
+Je crée ensuite les autres roles en les précisant dans mon docker.yml :
+![alt text](img_github/image5.png)
+
+et on teste si cela marche :
+![alt text](img_github/image-6.png)
