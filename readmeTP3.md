@@ -168,3 +168,5 @@ malheureusement cela aurait était trop facile, cela ne marche pas, j'essaye don
 ssh -i ../../.ssh/id_rsa_ansible centos@antoine.adjamidis.takima.cloud
 ```
 
+les trois contenaires fonctionnaient :
+![alt text](img_github/image-16.png)
