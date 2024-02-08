@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
     database:
-        image: lodene/tp-devops-database:1.0
+        image: lodene/tp-devops-database:latest
         networks:
           - app-network #nom du network
         environment: #variable d'environnement qu'on peut utiliser dans les fichiers de serv/ pour ne pas qu'il apparaisse en clair dans les fichiers
@@ -10,7 +10,7 @@ services:
             - POSTGRES_PASSWORD=pwd
             - POSTGRES_USER=myuser
     backend:
-        image: lodene/tp-devops-backend:1.0 #nom de l'iamge avec la version 
+        image: lodene/tp-devops-backend:latest #nom de l'iamge avec la version 
         networks: 
           - app-network #nom du network
         depends_on: 
@@ -22,7 +22,7 @@ services:
             - URL=database:5432 
 
     httpd:
-        image: lodene/tp-devops-httpd:1.0
+        image: lodene/tp-devops-httpd:latest
         ports:
           - "80:80" #port du server http du local et du contenaire
         networks:
