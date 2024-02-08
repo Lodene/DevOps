@@ -2,4 +2,4 @@
 # tasks file for roles/network
 - name: Create Docker network
   docker_network:
-    name: "{{ network_name }}"
+    name: "{{ docker_network_name }}"
