@@ -8,3 +8,16 @@ NOTE DE COURS
     impérative -> on dit ce qu'il doit faire (language c par exemple)
 
     superuser -> become: yes
+
+
+    ansible ?
+        outils de provisoning, il existe aussi teraform (équivalent a ansible)
+
+    C'est le reverse proxy virtuelle qui est le plus problématique car embouchement donc pour pallier à ce probleme on utilise plus des contenaires pour le reverse proxy mais des machines physique.
+
+    ESN :
+        entreprise de service numérique
+        entreprise qui fournit son expertise au client
+
+    byvernault@takima.fr avant vendredi 18h
+

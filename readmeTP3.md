@@ -163,7 +163,7 @@ ansible-playbook -i inventories/setup.yml roles.yml
 
 Quant je lance le server, cela m'affiche :
 ![alt text](img_github/image-15.png)
-malheureusement cela aurait était trop facile mais cela ne marche pas, j'assaye donc de me connecter en ssh :
+malheureusement cela aurait était trop facile, cela ne marche pas, j'essaye donc de me connecter en ssh :
 ```shell
 ssh -i ../../.ssh/id_rsa_ansible centos@antoine.adjamidis.takima.cloud
 ```
