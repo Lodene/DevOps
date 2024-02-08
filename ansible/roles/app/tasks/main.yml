@@ -5,7 +5,7 @@
     name: databackendbase
     image: lodene/tp-devops-backend:latest
   vars: #variable d'environnement
+    URL: database:5432 
     DATABASE_PASSWORD: pwd 
     DB: mydatabase 
     USER: myuser 
-    URL: database:5432 
