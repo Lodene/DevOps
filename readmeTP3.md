@@ -149,3 +149,6 @@ Je crée ensuite les autres roles en les précisant dans mon docker.yml :
 
 et on teste si cela marche :
 ![alt text](img_github/image-6.png)
+
+Ensuite il faut acceder a chaque fichier main.yml de chaque role (roles/mon_role/tasks/main.yml) pour entrer la configuration de chaque role. Pour les valeurs comment la database, le password, l'username ou le network, j'ai mit une variable qui est définit dans ansible/vars.yml qui ressemble à :
+![alt text](img_github/image-13.png)
