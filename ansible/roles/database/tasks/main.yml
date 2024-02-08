@@ -1,7 +1,7 @@
 - name: Launch Database
   docker_container:
     name: database
-    image: lodene/tp-devops-database:latest
+    image: lodene/tp-devops-database:1.0
     env:
       POSTGRES_DB: "{{ database_name }}"
       POSTGRES_PASSWORD: "{{ database_password }}"
