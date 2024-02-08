@@ -84,17 +84,3 @@ Pointez sur le document/rapport.
 
 Pourquoi mettons-nous nos images dans un dépôt en ligne ?
     Pour pouvoir le récupérer de n'importe ou si on a les codes d'authentification
-
-
-
-NOTE DE COURS
-    docker composer -> plus efficace que docker run car pas besoin de supprimer le contenaire quand on veut modifier qqc avec docker compose
-    différence entre RUN et CMD dans le dockerfile -> Run se lance au début alors que CMD se lance lorsqu'on build  
-    CI -> ... intégration
-    CD -> ... ...
-
-
-    declarative ->  on décrit ce que l'ont veut 
-    impérative -> on dit ce qu'il doit faire (language c par exemple)
-
-    superuser -> become: yes

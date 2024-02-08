@@ -152,3 +152,19 @@ et on teste si cela marche :
 
 Ensuite il faut acceder a chaque fichier main.yml de chaque role (roles/mon_role/tasks/main.yml) pour entrer la configuration de chaque role. Pour les valeurs comment la database, le password, l'username ou le network, j'ai mit une variable qui est définit dans ansible/vars.yml qui ressemble à :
 ![alt text](img_github/image-13.png)
+
+on oublie pas biensur de préciser a notre playbook où aller chercher les variables :
+![alt text](img_github/image-14.png)
+
+plus qu'à lancer le playbook pour que cela marche :
+```shell
+ansible-playbook -i inventories/setup.yml roles.yml
+```
+
+Quant je lance le server, cela m'affiche :
+![alt text](img_github/image-15.png)
+malheureusement cela aurait était trop facile mais cela ne marche pas, j'assaye donc de me connecter en ssh :
+```shell
+ssh -i ../../.ssh/id_rsa_ansible centos@antoine.adjamidis.takima.cloud
+```
+
