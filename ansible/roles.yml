@@ -7,3 +7,5 @@
     - database
     - app
     - proxy
+  vars_files:
+    - vars.yml
