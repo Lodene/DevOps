@@ -4,8 +4,8 @@
   docker_container:
     name: databackendbase
     image: lodene/tp-devops-backend:latest
-    environment: #variable d'environnement
-      - DATABASE_PASSWORD=pwd 
-      - DB=mydatabase 
-      - USER=myuser 
-      - URL=database:5432 
+    vars: #variable d'environnement
+      - DATABASE_PASSWORD: pwd 
+      - DB: mydatabase 
+      - USER: myuser 
+      - URL: database:5432 
