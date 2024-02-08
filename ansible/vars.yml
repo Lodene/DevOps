@@ -3,3 +3,4 @@ database_user: myuser
 database_password: pwd
 docker_network_name: app-network
 network_name: app-network
+database_port: "80:80"
