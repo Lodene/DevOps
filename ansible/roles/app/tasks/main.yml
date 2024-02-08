@@ -2,12 +2,12 @@
 # tasks file for roles/app
 - name: Launch Database
   docker_container:
-    name: databackendbase
+    name: backend
     image: lodene/tp-devops-backend:latest
     networks:
       - name: "{{ docker_network_name }}"
     env:
-      URL: database:5432 
-      DATABASE_PASSWORD: pwd 
-      DB: mydatabase 
-      USER: myuser 
+      URL: database:5432
+      DATABASE_PASSWORD: pwd
+      DB: mydatabase
+      USER: myuser
