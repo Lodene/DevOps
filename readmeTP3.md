@@ -170,3 +170,5 @@ ssh -i ../../.ssh/id_rsa_ansible centos@antoine.adjamidis.takima.cloud
 
 les trois contenaires fonctionnaient :
 ![alt text](img_github/image-16.png)
+
+Les trois logs n'indiquaient pas d'erreur et il était trop tard pour les résoudre (fin à 19h).

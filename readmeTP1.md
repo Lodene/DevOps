@@ -83,4 +83,5 @@ Pointez sur le document/rapport.
 
 
 Pourquoi mettons-nous nos images dans un dépôt en ligne ?
-    Pour pouvoir le récupérer de n'importe ou si on a les codes d'authentification
+    Pour pouvoir le récupérer de n'importe ou si on a les codes d'authentification + Cela facilite le travail si on bosse à plusieurs.
+
